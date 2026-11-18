@@ -353,9 +353,6 @@ main { display: grid; grid-template-rows: 1fr auto; min-height: 0; }
     const w = el("div"); w.appendChild(el("p", null, esc(T[lang].hello))); w.firstChild.style.margin = "0 0 8px";
     w.appendChild(el("p", null, `<strong>${esc(T[lang].popular)}</strong>`)); w.lastChild.style.margin = "0 0 6px";
     w.appendChild(chipList(POPULAR)); addBot(w);
-    const ex = byId["PMMVY-C1"];
-    const ur = el("div", "row user"); ur.appendChild(el("div", "bubble", `<div class="example-tag">${esc(T[lang].example)}</div>` + esc(lang === "hi" ? "कितना पैसा मिलेगा?" : "How much money will I get?"))); chat.appendChild(ur);
-    answer(ex, ["PMMVY-F1", "PMMVY-F2"], true);
     chat.scrollTop = 0;
   }
 
